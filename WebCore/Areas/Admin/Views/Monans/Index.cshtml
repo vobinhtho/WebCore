@@ -1,0 +1,71 @@
+﻿@model IEnumerable<WebCore.DBContextofSQLserver.Monan>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.MaloaiNavigation.Tenloai)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ManhomNavigation.Tennhom)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tenmonan)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Mieuta)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Giaban)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Giagiam)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Hinh)
+        </th>
+        <th>Cập nhật</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaloaiNavigation.Tenloai)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ManhomNavigation.Tennhom)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tenmonan)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Mieuta)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Giaban)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Giagiam)
+            </td>
+            <td>
+                <img src="@Url.Content("~/css/" + item.Hinh)" width="45" />
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Mamonan }) |
+                @Html.ActionLink("Details", "Details", new { id = item.Mamonan }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Mamonan })
+            </td>
+        </tr>
+    }
+
+</table>

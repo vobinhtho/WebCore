@@ -1,0 +1,48 @@
+﻿@model IEnumerable<WebCore.DBContextofSQLserver.Voucher>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Mavoucher)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tenvoucher)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tylegiamgia)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Mavoucher)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tenvoucher)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tylegiamgia)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.IdVoucher">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.IdVoucher">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.IdVoucher">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

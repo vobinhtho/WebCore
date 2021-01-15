@@ -1,0 +1,76 @@
+﻿@model WebCore.DBContextofSQLserver.Monan
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Details</h1>
+
+
+<div>
+    <h4>MONAN</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MaloaiNavigation.Tenloai)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaloaiNavigation.Tenloai)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ManhomNavigation.Tennhom)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ManhomNavigation.Tennhom)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tenmonan)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tenmonan)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Mieuta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Mieuta)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Giaban)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Giaban)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Giagiam)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Giagiam)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Hinh)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Hinh)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Mamonan }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

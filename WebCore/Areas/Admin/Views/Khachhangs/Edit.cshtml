@@ -1,0 +1,50 @@
+﻿@model WebCore.DBContextofSQLserver.Khachhang
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Edit</h1>
+
+<h4>Khachhang</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Makh" />
+            <div class="form-group">
+                <label asp-for="Matk" class="control-label"></label>
+                <select asp-for="Matk" class="form-control" asp-items="ViewBag.Matk"></select>
+                <span asp-validation-for="Matk" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Tenkh" class="control-label"></label>
+                <input asp-for="Tenkh" class="form-control" />
+                <span asp-validation-for="Tenkh" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Sdtkh" class="control-label"></label>
+                <input asp-for="Sdtkh" class="form-control" />
+                <span asp-validation-for="Sdtkh" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Diachikh" class="control-label"></label>
+                <input asp-for="Diachikh" class="form-control" />
+                <span asp-validation-for="Diachikh" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
